@@ -1,0 +1,7 @@
+/vendor
+/.idea
+.env
+/docker-compose.local.yml
+**.log
+*/.DS_Store
+.DS_Store
