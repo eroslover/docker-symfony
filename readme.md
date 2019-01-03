@@ -63,8 +63,8 @@ $ php app/console cache:clear # Symfony2
 $ php bin/console cache:clear # Symfony3, 4
 
 # Delete all containers
-$ docker rm -r $(docker ps -aq)
+$ docker rm -f $(docker ps -aq)
 
 # Delete all images
-$ docker rmi -r $(docker images -aq)
+$ docker rmi -f $(docker images -aq)
 ```
