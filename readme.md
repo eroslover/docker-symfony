@@ -45,6 +45,16 @@ Then copy all necessary variables from symfony env file to the main env file.
 docker will take from 5 to 10 minutes to download and build images. Then it will start containers. 
 To verify containers were started correctly run `docker-compose -f docker-compose.local.yml ps`.
 
+### Using PostgreSQL with Symfony 4
+
+* Edit `config/doctrine.yaml` and replace the default mysql settings in `doctrine/dbal` section as follows
+doctrine:
+```
+dbal:
+    driver: 'pdo_pgsql'
+    charset: utf8
+```
+
 ## How to enable XDebug
 
 * Set the variable `PHP_FPM_INSTALL_XDEBUG` to `true` in the main env file
@@ -57,6 +67,12 @@ To verify containers were started correctly run `docker-compose -f docker-compos
 ```$xslt
 # Enter to workspace bash for using composer, npm or symfony commands
 $ docker-compose -f docker-compose.local.yml exec --user symfodock workspace bash
+
+# Stop docker containers
+$ docker-compose -f docker-compose.local.yml stop
+
+# Stop and delete docker containers
+$ docker-compose -f docker-compose.local.yml down
 
 # Clear cache
 $ php app/console cache:clear # Symfony2
