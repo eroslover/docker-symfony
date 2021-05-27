@@ -46,11 +46,11 @@ alias h="history"
 alias j="jobs"
 alias e='exit'
 alias c="clear"
-alias cla="clear && ls -l"
-alias cll="clear && ls -la"
+alias cla="clear && ls -la"
+alias cll="clear && ls -l"
 alias cls="clear && ls"
 alias code="cd /var/www"
-alias ea="vi ~/aliases"
+alias ea="vi ~/aliases.sh"
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
@@ -77,7 +77,6 @@ alias npm-global="npm list -g --depth 0"
 alias ra="reload"
 alias reload="source ~/.aliases && echo \"$COL_GREEN ==> Aliases Reloaded... $COL_RESET \n \""
 alias run="npm run"
-alias tree="xtree"
 
 # Xvfb
 alias xvfb="Xvfb -ac :0 -screen 0 1024x768x16 &"
@@ -97,6 +96,13 @@ alias gd="git --no-pager diff"
 alias git-revert="git reset --hard && git clean -df"
 alias gs="git status"
 alias whoops="git reset --hard && git clean -df"
+alias glog="git log --oneline --decorate --graph"
+alias gloga="git log --oneline --decorate --graph --all"
+alias gsh="git show"
+alias grb="git rebase -i"
+alias gbr="git branch"
+alias gc="git commit"
+alias gck="git checkout"
 
 # Create a new directory and enter it
 function mkd() {
